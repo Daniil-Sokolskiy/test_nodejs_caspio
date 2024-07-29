@@ -2,6 +2,11 @@ import request from 'request';
 import rp from 'request-promise';
 import config from '../config/config.json';
 
+const logger = {
+    info: console.log,
+    error: console.error
+};
+
 export class CaspioHelper {
     async getAccessToken() {
         return new Promise(function (resolve, rejected) {
